@@ -176,9 +176,9 @@
 <div class="content">
     <div id="indice" class="content-section">
             <h1>ÍNDICE</h1>
-            <p><B>Águila</B> fue programada por <a href="https://www.linkedin.com/in/manuelgalans"><B>M4nu</B></a>. Aguila es una herramienta diseñada para la vigilancia y manipulación de tráfico de red en tiempo real. Aguila permite interceptar, analizar y alterar la comunicación entre<br> dispositivos en una red. Funciona principalmente en tres modos: Aguila-Https, Aguila-Http y Aguila-Infection.<br><br>
+            <p><B>Águila</B> fue programada por <a href="https://www.linkedin.com/in/manuelgalans"><B>M4nu</B></a>. Aguila es una herramienta diseñada para la vigilancia y manipulación de tráfico de red en tiempo real. Aguila permite interceptar, analizar y alterar la comunicación entre dispositivos en una red. Funciona principalmente en tres modos: Aguila-Https, Aguila-Http y Aguila-Infection.<br><br>
 
-                <b>Aguila-Https:</b> Este modo utiliza un proxy y la herramienta mitmdump para interceptar y analizar tráfico HTTPS. Permite visualizar y modificar datos que por lo general están cifrados, como las solicitudes de sitios web y los datos enviados a través de formularios como las credenciales, ademas cuenta con otra herramienta que sin necesidad de configurar el proxy<br> puede interceptar el trafico de dominios visitados por la víctima.
+                <b>Aguila-Https:</b> Este modo utiliza un proxy y la herramienta mitmdump para interceptar y analizar tráfico HTTPS. Permite visualizar y modificar datos que por lo general están cifrados, como las solicitudes de sitios web y los datos enviados a través de formularios como las credenciales, ademas cuenta con otra herramienta que sin necesidad de configurar el proxy puede interceptar el trafico de dominios visitados por la víctima.
         <br><br><b>Aguila-Http:</b> Se enfoca en el tráfico HTTP. Captura URLs visitadas y puede detectar posibles credenciales enviadas sin cifrar, como nombres de usuario y contraseñas.
         <br><br><b>Aguila-Infection:</b> Esta funcionalidad permite el "envenenamiento" de dominios específicos. Esto significa que cuando un dispositivo intenta acceder a un dominio envenenado, Aguila redirige la solicitud a una página controlada por el atacante, permitiendo implantar contenido específico o capturar más datos del usuario engañado.
         <br><br><b class="titulito">Iniciar Águila</b>
@@ -195,7 +195,7 @@
 cd Aguila
 cd main
 chmod +x Aguila.py AguilaHttps.py mitmdupm 
-sudo apt install libnetfilter-queue-dev; pip3 install netfilterqueue netifaces scapy termcolor mitmproxy urllib3
+pip install -r requirements.txt
 sudo ./Aguila</code></pre>
             
 
@@ -219,6 +219,10 @@ sudo ./Aguila</code></pre>
            <b class="titulito">Configuración Automatica:</b><br><br>
            
            Para ejecutar este método, necesitarás un <a href="https://a.aliexpress.com/_EQEjeD5">Rubber Ducky</a>. Configúralo e inserta el siguiente código:<br><br>
+            <video width="320" height="240" style="margin-left: 30%;" controls>
+                <source src="images/VideoRubberDucky.mp4" type="video/mp4">
+                Tu navegador no admite el elemento <code>video</code>.
+            </video><br><br>
 
            <pre class="code"><code>REM Inicia una instancia de cmd como administrador
 DELAY 500
@@ -395,10 +399,7 @@ DELAY 200
 ALT F4
 DELAY 700</code></pre>
 <p>Este código es ajustables, tomalo como referencia pero no como definitivo.</p>
-<video width="320" height="240" style="margin-left: 30%;" controls>
-    <source src="images/VideoRubberDucky.mp4" type="video/mp4">
-    Tu navegador no admite el elemento <code>video</code>.
-</video><br><br>
+<br><br>
 
            <b class="titulito">Configuración Manual:</b><br><br>
 
@@ -492,8 +493,8 @@ DELAY 700</code></pre>
                     <a href="https://github.com/m4nugs" class="social-button" target="_blank" style="font-size: 24px; padding: 10px 20px; background-color: #333; color: white; border-radius: 5px; margin: 5px; text-decoration: none;">
                         <i class="fab fa-github"></i> GitHub
                     </a>
-                </div><br><br>
-                <p style="font-size: 10px;">
+                </div><br><br><br>
+                <p style="font-size: 11px;">
                     ⚠️ ATENCIÓN: Esta herramienta ha sido creado exclusivamente con fines educativos, todas las demostraciones son realizadas dentro de entornos controlados que han sido creados para realizar estas pruebas sin afectar a nadie. En ningún momento se fomenta el uso inadecuado de estas técnicas.</p>
                 
             </p>
