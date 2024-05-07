@@ -456,13 +456,7 @@ DELAY 700</code></pre>
             </p>
                 <img src="images/Aguila-arp-spoof.png" class="img" style="width: 80%; margin-left: 10%;">
             <p>
-                Victima comprometida, ahora tenemos que cambiar los paquetes dns, dejamos Aguila-arp-spoof ejecutandose, nos vamos a otra
-                terminal, y ejecutamos Aguila-dns-spoofer, escogemos los dominios que queremos cambiar y ya nos pertenecen esos dominios,
-                pero... ¿Como podemos enseñar en el dominio lo que nosotros queramos? pues simple, una vez que se este ejecutando Aguila-arp-spoof
-                y Aguila-dns-spoofer cada vez que la víctima visite los dominios envenenados le va a salir un error, pero para que le salga lo
-                que nosotros queremos que se vea, tendremos que irnos a otra terminal y abrir un puerto en python (python3 -m htt.server), antes
-                de abrirlo debemos de tener el index.html en el directorio una vez hecho esto cada vez que la victima abra estos dominios, le saldra
-                el index html que nosotros estamos enviando sdesde nuestro servidor python.<br><br>
+                Víctima comprometida, ahora tenemos que cambiar los paquetes DNS, dejamos Aguila-arp-spoof ejecutándose, nos vamos a otra terminal, y ejecutamos Aguila-dns-spoofer, escogemos los dominios que queremos cambiar y ya nos pertenecen esos dominios, pero... ¿Cómo podemos enseñar en el dominio lo que nosotros queramos? Pues simple, una vez que se esté ejecutando Aguila-arp-spoof y Aguila-dns-spoofer cada vez que la víctima visite los dominios envenenados le va a salir un error, pero para que le salga lo que nosotros queremos que se vea, tendremos que irnos a otra terminal y abrir un puerto en python (python3 -m http.server), antes de abrirlo debemos de tener el index.html en el directorio una vez hecho esto cada vez que la víctima abra estos dominios, le saldrá el index.html que nosotros estamos enviando desde nuestro servidor python.<br><br>
             </p>
             <img src="images/Envenenamiento-dns.png" style="width: 80%; margin-left: 10%;">
             <p>
