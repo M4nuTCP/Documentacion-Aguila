@@ -517,28 +517,25 @@ sudo iptables -P OUTPUT ACCEPT</code></pre>
 </div>
 
 <script>
-    // Asegurar que solo la sección de introducción sea visible inicialmente
     document.addEventListener('DOMContentLoaded', function() {
     document.querySelectorAll('.content-section').forEach(section => {
-        section.style.display = 'none'; // Ocultar todas las secciones
+        section.style.display = 'none';
     });
-    document.getElementById('indice').style.display = 'block'; // Mostrar al iniciar la web ---------------------------
+    document.getElementById('indice').style.display = 'block'; 
     document.querySelectorAll('.menu-item').forEach(item => {
-        item.classList.remove('active'); // Remover la clase active de todos
+        item.classList.remove('active'); 
     });
-    document.querySelector('[data-content="indice"]').classList.add('active'); // Añadir clase active al índice
+    document.querySelector('[data-content="indice"]').classList.add('active');
 });
 
     
-    // Cambiar de sección al hacer clic en los ítems del menú
     document.querySelectorAll('.menu-item').forEach(item => {
         item.addEventListener('click', function() {
             document.querySelectorAll('.menu-item').forEach(i => {
-                i.classList.remove('active'); // Remueve la clase 'active' de todos
+                i.classList.remove('active');
             });
-            item.classList.add('active'); // Añade 'active' al elemento clickeado
+            item.classList.add('active');
     
-            // Oculta todas las secciones de contenido
             document.querySelectorAll('.content-section').forEach(section => {
                 section.style.display = 'none';
             });
